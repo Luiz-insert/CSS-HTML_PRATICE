@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: darkgray;
+    min-height: 100vh;
+ 
+  
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid black;
+    width: 100%;
+    height: 60px;
+    font-size: 2em;
+}
+main {
+    flex: 1 0 auto;
+    padding: 10px;
+    display: grid;
+    background-color: darkgray;
+    font-size: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    'item1 item2 item3'
+    'item4 item4 item4'
+    'item5 item5 item6';
+    gap: 5px;
+ 
+  
+}
+
+.item {
+    display: flex;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.item1 {
+    grid-area: item1;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+}
+.item2 { 
+    grid-area: item2;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+}
+.item3 {
+    grid-area: item3; 
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+}
+.item4 {
+    grid-area: item4;  
+    justify-content: center;
+    align-items: center;
+}
+.item5 {
+    grid-area: item5;  
+    justify-content: center;
+    align-items: center;
+    min-width: 350px;
+}
+.item6 {
+    grid-area: item6;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid black;
+    width: 100%;
+    height: 60px; 
+    font-size: 2em;
+}
+@media (max-width: 780px) {
+    main{
+        grid-template-areas: 
+        'item1 item1 item1'
+        'item2 item2 item2'
+        'item3 item3 item3'
+        'item4 item4 item4'
+        'item5 item5 item6';
+    }
+}
+@media (max-width: 630px) {
+    main{
+        grid-template-areas: 
+        'item1 item1 item1'
+        'item2 item2 item2'
+        'item3 item3 item3'
+        'item4 item4 item4'
+        'item5 item5 item5'
+        'item6 item6 item6';
+    }
+}
+@media (max-width: 360px) {
+    .item5 {
+        min-width: auto;
+    }
+}
+
